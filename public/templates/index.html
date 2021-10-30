@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="text-gray-700 text-lg">
+    
+    <div class = "flex bg-gray-200">
+        <div>
+            <nav>
+                <div>
+                    <h1 class = "uppercase text-xl font-bold p-8 shadow-lg">
+                        <a href="/">Final Project</a>
+                    </h1>
+                </div>
+                <ul class="text-lg font-semibold px-10">
+                    <li class="p-4">
+                        <a href="#">
+                            <span class ="p-2 bg-red-200 rounded">Pedestrian recognition</span>
+                        </a>
+                        <a href="#">
+                            <span class = "p-2 bg-red-200 rounded">Metrics</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div> 
+    </div>
+    <div>
+        <main method = "post" action = "/public/result/" class = " border-b border-gray-300 px-16 py-6 bg-gray-100">
+            <div>
+                <a class = "flex justify-center font-semibold">Image recognition</a>
+                 <div class="flex flex-grow-0 justify-center box-border shadow-lg p-4">
+                    <input type="file"id="pedestrian_test" name="pedestrian_test" accept="image/png, image/jpeg"/>
+                    <input name ="submit"type="submit" value="Upload"/>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+
+<p></p>
+<img src="{{url_for('static', filename='pedestrian.jpg')}}"/>
+</body>
+</html>
